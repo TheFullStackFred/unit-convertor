@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
     <title>Unit Converter</title>
   </head>
   <body>
     <main>
       <div id="input-section">
         <h1>Metric/Imperial Unit Conversion</h1>
-        <input type="number" />
-        <button>Convert</button>
+        <input id="input" type="number" />
+        <button id="convert-btn">Convert</button>
       </div>
       <div id="result-section">
         <div class="card">
-          <h3>Length (Meter/Feed)</h3>
-          <p>20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
+          <h3>Length (Meter/Feet)</h3>
+          <p id="length"></p>
         </div>
         <div class="card">
-          <h3>Volume (Lite/Gallons)</h3>
-          <p>20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+          <h3>Volume (Liters/Gallons)</h3>
+          <p id="volume"></p>
         </div>
         <div class="card">
           <h3>Mass (Kilograms/Pounds)</h3>
-          <p>20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+          <p id="mass"></p>
         </div>
       </div>
     </main>
