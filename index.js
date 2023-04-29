@@ -21,16 +21,16 @@ convertBtn.addEventListener('click', function () {
   }
 
   // Convert length
-  const feet = convertLength(valueToConvert, FEET_PER_METER)
-  const meters = convertLength(valueToConvert, 1 / FEET_PER_METER)
+  const feet = convertValue(valueToConvert, FEET_PER_METER)
+  const meters = convertValue(valueToConvert, 1 / FEET_PER_METER)
 
   // Convert volume
-  const liters = convertVolume(valueToConvert, LITERS_PER_GALLON)
-  const gallons = convertVolume(valueToConvert, 1 / LITERS_PER_GALLON)
+  const liters = convertValue(valueToConvert, LITERS_PER_GALLON)
+  const gallons = convertValue(valueToConvert, 1 / LITERS_PER_GALLON)
 
   // Convert mass
-  const kilos = convertMass(valueToConvert, KILOGRAMS_PER_POUND)
-  const pounds = convertMass(valueToConvert, 1 / KILOGRAMS_PER_POUND)
+  const kilos = convertValue(valueToConvert, KILOGRAMS_PER_POUND)
+  const pounds = convertValue(valueToConvert, 1 / KILOGRAMS_PER_POUND)
 
   // Display results
   lengthEl.textContent = `${valueToConvert} meters = ${feet.toFixed(
@@ -44,17 +44,7 @@ convertBtn.addEventListener('click', function () {
   )} pounds | ${valueToConvert} pounds = ${kilos.toFixed(3)} kilos`
 })
 
-// Convert length from meters to feet and vice versa
-function convertLength(value, conversionFactor) {
-  return value * conversionFactor
-}
-
-// Convert volume from liters to gallons and vice versa
-function convertVolume(value, conversionFactor) {
-  return value * conversionFactor
-}
-
-// Convert mass from kilograms to pounds and vice versa
-function convertMass(value, conversionFactor) {
+// Convert all values
+function convertValue(value, conversionFactor) {
   return value * conversionFactor
 }
